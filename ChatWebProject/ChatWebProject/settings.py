@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -130,4 +131,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #Add asgi application for websockets
-ASGI_APPLICATION = "core.routing.application"
+#ASGI_APPLICATION = "ChatWebProject.routing.application"
+ASGI_APPLICATION = "ChatWebProject.asgi.application"
