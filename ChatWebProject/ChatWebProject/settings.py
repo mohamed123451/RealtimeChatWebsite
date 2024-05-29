@@ -133,3 +133,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #Add asgi application for websockets
 #ASGI_APPLICATION = "ChatWebProject.routing.application"
 ASGI_APPLICATION = "ChatWebProject.asgi.application"
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}
